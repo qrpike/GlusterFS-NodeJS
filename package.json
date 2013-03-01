@@ -1,0 +1,23 @@
+{
+
+	"author"		: "Stackdot <info@stackdot.com> (Quinton Pike)",
+	"name"			: "glusterfs",
+	"description"	: "GlusterFS wrapper for NodeJS",
+	"version"		: "0.1.1",
+	"main"			: "GlusterFS.js",
+	"keywords"		: ["glusterfs","wrapper","api","gluster","filesystem"],
+
+	"repository" : {
+		"type"	: "git",
+		"url"	: "https://github.com/qrpike/GlusterFS-NodeJS"
+	},
+
+	"dependencies"		: {
+		"colors"	: "*",
+		"validator"	: "*"
+	},
+
+	"engines": {
+		"node": "*"
+	}
+}
