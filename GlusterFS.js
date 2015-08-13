@@ -50,6 +50,8 @@ GlusterFS = (function() {
   };
 
   GlusterFS.prototype.formatOptions = function(opts) {
+    if (typeof opts === 'string') return opts;
+
     var option, str, value;
     str = (function() {
       var _results;
