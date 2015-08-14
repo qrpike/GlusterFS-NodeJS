@@ -19,7 +19,7 @@ GlusterFS = (function() {
     this.volume = __bind(this.volume, this);
     this.formatOptions = __bind(this.formatOptions, this);
     this.__run = __bind(this.__run, this);
-    this.volumeCommands = ['info', 'create', 'delete', 'start', 'stop', 'rename', 'add-brick', 'remove-brick', 'rebalance', 'replace-brick', 'set-transport', 'log filename', 'log locate', 'log rotate'];
+    this.volumeCommands = ['info', 'create', 'delete', 'start', 'stop', 'rename', 'add-brick', 'remove-brick', 'rebalance', 'replace-brick', 'set', 'set-transport', 'log filename', 'log locate', 'log rotate'];
     this.peerCommands = ['probe', 'detach', 'status'];
   }
 
@@ -50,6 +50,8 @@ GlusterFS = (function() {
   };
 
   GlusterFS.prototype.formatOptions = function(opts) {
+    if (typeof opts === 'string') return opts;
+
     var option, str, value;
     str = (function() {
       var _results;
@@ -121,6 +123,6 @@ GlusterFS = (function() {
     return this.__run(cmd + " --xml", cb);
   };
 
-  return GlusterFS;
+  module.exports = GlusterFS;
 
 })();
